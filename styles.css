@@ -1,8 +1,16 @@
-.headings {
-	margin-right: 0%;
+.header {
+    text-align: right;
+}
+
+.slide-menu ul {
+    list-style: none;
+}
+
+.slide-menu ul li {
+    display: inline-block;
 }
 
 .img-thumbnail {
+    height: 200px;
 	width: 200px;
-	height: 200px;
 }
