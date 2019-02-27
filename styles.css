@@ -14,3 +14,13 @@
     height: 200px;
 	width: 200px;
 }
+
+img {
+    height: auto;
+    max-width: 100%;
+    transition: transform .3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.2);
+}
