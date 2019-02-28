@@ -4,6 +4,10 @@ img {
     transition: transform .3s;
 }
 
+.thumbnail {
+    max-width: 33%;
+}
+
 .thumbnail:hover {
     transform: scale(1.2);
 }
