@@ -4,8 +4,10 @@ img {
     transition: transform .3s;
 }
 
+
 .thumbnail {
-    max-height: 250px;
+    max-height: 300px;
+    margin: 1em;
 }
 
 .thumbnail:hover {
@@ -16,3 +18,14 @@ img {
    max-width: 100%;
 }
 
+@media (min-width: 576px) {
+    .header-options {
+        float: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-options {
+        float: right;
+    }
+}
