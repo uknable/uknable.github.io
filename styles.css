@@ -5,9 +5,14 @@ img {
 }
 
 .thumbnail {
-    max-width: 33%;
+    max-height: 250px;
 }
 
 .thumbnail:hover {
     transform: scale(1.2);
 }
+
+.modal-dialog {
+   max-width: 100%;
+}
+
