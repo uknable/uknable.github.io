@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- Meta tags -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="designer" content="Rob Dongas">
+   <!-- Required imported CSS files -->
+   <link rel="stylesheet" href="css/reset.css" />
+   <!-- Main CSS file -->
+   <link rel="stylesheet" href="css/styles.css" />
+
+   <!-- Title -->
+   <title>Interaction Design Studio</title>
+</head>
+
+
+<body class="container" id="top">
+
+   <!-- Make your modifications below -->
+   <header>
+      <div class="header-container">
+         <h1>Andrew Nguyen Le</h1>
+      </div>
+      <nav>
+         <input type="checkbox" id="toggle" checked>
+         <label for="toggle" class="nav-toggle">
+            <div class="nav-icon"></div>
+         </label>
+         <ul>
+            <li>
+               <a href="index.html">Back to Home</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- Make your navigation modifications below -->
+
+   <!-- Replicate the heading structure for a 'table of contents' nav -->
+   <aside>
+      <div class="aside-container">
+         <h4>Jump To...</h4>
+         <ol>
+            <li><a href="#part1">Design Brief</a></li>
+            <li><a href="#part2">Research Methods</a></li>
+            <li><a href="#part3">Research Findings</a></li>
+            <li><a href="#part4">Extension of Design Brief</a></li>
+            <li><a href="#part5">Final design</a></li>
+         </ol>
+      </div>
+   </aside>
+   <main>
+      <article>
+
+         <!-- Make your content modifications below -->
+         <!-- Section for the top banner heading -->
+         <section class="title-container">
+            <h1 id="title">2nd Year, 1st Semester - Defqon Wristband</h1>
+            <span class="separator"></span>
+         </section>
+
+         <!-- Body section with heading elements -->
+         <section class="content-container">
+            <h3 id="part1">Design Brief</h3>
+            <p>For a museum, theatre or festival in Sydney design a digital/tangible/spatial experience that builds upon the content they offer (e.g. performances, collections). It should improve the visitor experience and help the institution to engage with new audiences, or affirm their relationship with existing ones. The experience should be closely interwoven with the context; it could not exist without that environment.</p>
+         </section>  
+         <section class="content-container">
+            <h3 id="part2">Research Methods</h3>
+            <p>Context-mapping sessions allow researchers to access a participant’s latent knowledge through the creation of collages and mind maps. The collages are from a pool of ambiguous images and words. After making their collages, participants share what they’ve made and are interviewed on their process.</p>
+            <figure class="image-container">
+               <!-- Link your own images from the img folder or somewhere online -->
+               <img src="img/defqoncm.jpg" alt="Context-mapping session." />
+               <figcaption>Context-mapping sessions access latent knowledge.</figcaption>
+            </figure>
+            <figure class="image-container">
+               <!-- Link your own images from the img folder or somewhere online -->
+               <img src="img/wordsimages.png" alt="Context-mapping session." />
+               <figcaption>The words and images that participants could use.</figcaption>
+            </figure>
+            <figure class="image-container">
+               <!-- Link your own images from the img folder or somewhere online -->
+               <img src="img/cm1.png" alt="Context-mapping session." />
+               <figcaption>One of the maps made during the session.</figcaption>
+            </figure>
+         </section>
+
+         <section class="content-container">
+            <h3 id="part3">Research Findings</h3>
+            <figure class="image-container">
+               <!-- Link your own images from the img folder or somewhere online -->
+               <img src="img/statementcards.png" alt="Context-mapping session." />
+               <figcaption>We synthesised our data using statement cards.</figcaption>
+            </figure>
+         </section>
+
+         <section class="content-container">
+            <h3 id="part4">Extension of Design Brief</h3>
+            <p>We then had to decide what direction we wanted to go into based on our research insights. <br>
+            We decided to focus on the drug aspect as it was topical at the time with the imminent shutdown of music festivals.<br>
+            It was an interesting problem to work on because the government’s approach to increase security presence actually encouraged drug users to adopt more risky and opportunistic behaviour.
+            </p>
+         </section>
+
+         <section class="content-container">
+            <h3 id="part5">Final design</h3>
+            <p>After a process of ideation and iteration, we decided on a final design taking on the form of a wristband.</p>
+            <figure class="image-container">
+               <!-- Link your own images from the img folder or somewhere online -->
+               <img src="img/userjourney.png" alt="Context-mapping session." />
+               <figcaption>User journey map detailing one of the touchpoints that the Defqon Wristband would improve upon.</figcaption>
+            </figure>
+            <p>
+               The Defqon Wristband is a wearable that takes inspiration from multiple existing technologies and combines them to create a specialised experience for Defqon attendees with a focus on keeping illicit substance users safe. It is the result of research into wearable technology and biometrics, the utilisation of a decision matrix as well as expert feedback. With features aimed to address context specific problems while building upon the existing content of the festival, the final design is directly tailored toward the initial design brief and issues revealed through user research.
+            </p>
+         </section>
+
+      </article>
+   </main>
+
+   <!-- DO NOT modify the following code -->
+   <footer>
+      <a href="#top">
+         <svg class="icon-arrow-up">
+            <use xlink:href="#arrow"></use>
+         </svg>Back to top</a>
+         <p></p> 
+      <div class="logo-container"><img src="img/USydLogo.svg" /></div>
+      <svg style="display: none;">
+         <defs>
+            <symbol id="arrow" viewBox="0 0 35 15">
+               <title>Arrow</title>
+               <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z " />
+            </symbol>
+         </defs>
+      </svg>
+   </footer>
+
+
+   <!-- Required imported js -->
+   <script src="js/scrollmenu.js"></script>
+   <script type="text/javascript">
+      new ScrollMenu('.aside-container a[href*="#"]', {
+         duration: 500,
+         activeOffset: 100,
+      })
+      new ScrollMenu('footer a[href*="#"], .content-container a[href*="#"]', {
+         duration: 500,
+      })
+   </script>
+
+
+</body>
+
+</html>

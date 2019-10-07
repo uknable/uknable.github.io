@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- Meta tags -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="designer" content="Rob Dongas">
+   <!-- Required imported CSS files -->
+   <link rel="stylesheet" href="css/reset.css" />
+   <!-- Main CSS file -->
+   <link rel="stylesheet" href="css/styles.css" />
+
+   <!-- Title -->
+   <title>Interaction Design Studio</title>
+</head>
+
+
+<body class="container" id="top">
+
+   <!-- Make your modifications below -->
+   <header>
+      <div class="header-container">
+         <h1>Your Name</h1>
+      </div>
+      <nav>
+         <input type="checkbox" id="toggle" checked>
+         <label for="toggle" class="nav-toggle">
+            <div class="nav-icon"></div>
+         </label>
+         <ul>
+            <li>
+               <a href="about.html">About</a>
+            </li>
+            <li>
+               <a href="task1.html">Task 1</a>
+            </li>
+            <li>
+               <a href="task2.html">Task 2</a>
+            </li>
+            <li>
+               <a href="task3.html">Task 3</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- Make your navigation modifications below -->
+   <!-- Replicate the heading structure for a 'table of contents' nav -->
+   <aside>
+      <div class="aside-container">
+         <h4>Jump To...</h4>
+         <ol>
+            <li><a href="#part1">Heading 1</a></li>
+            <ol>
+               <li><a href="#part1-1">Heading 2</a></li>
+               <ol>
+                  <li><a href="#part1-1-1">Heading 3</a></li>
+                  <ol>
+                     <li><a href="#part1-1-1-1">Heading 4</a></li>
+                  </ol>
+               </ol>
+            </ol>
+            <li><a href="#part2">Elements</a></li>
+            <ol>
+               <li><a href="#part2-1">Text</a></li>
+               <li><a href="#part2-2">Lists</a></li>
+            </ol>
+            <li><a href="#part3">Media</a></li>
+            <ol>
+               <li><a href="#part3-1">Images</a></li>
+               <li><a href="#part3-2">Videos</a></li>
+               <li><a href="#part3-3">Prototpyes</a></li>
+            </ol>
+         </ol>
+      </div>
+   </aside>
+
+   <main>
+      <article>
+
+         <!-- Make your content modifications below -->
+         <!-- Section for the top banner heading -->
+         <section class="title-container">
+            <h1 id="title">Template</h1>
+            <p>Made by Rob Dongas | 12 August 2019</p>
+            <span class="separator"></span>
+         </section>
+
+         <!-- Body section with additional heading elements -->
+         <section class="content-container">
+            <h1 id="part1">Heading 1</h1>
+            <h2 id="part1-1">Heading 2</h2>
+            <h3 id="part1-1-1">Heading 3</h3>
+            <h4 id="part1-1-1-1">Heading 4</h4>
+         </section>
+
+         <!-- Body section with HTML formatting elements -->
+         <section class="content-container">
+            <h1 id="part2">Elements</h1>
+
+            <h2 id="part2-1">Text</h2>
+            <p>Regular text.</p>
+            <p><strong>Strong text.</strong></p>
+            <p><em>Emphasised text.</em></p>
+            <blockquote>Blockquote - Useful for quotes or callouts.</blockquote>
+            <p><a href="#part2-1">Link text.</a></p>
+
+            <h2 id="part2-2">Lists</h2>
+            <ol>
+               <li>Ordered</li>
+               <li>List</li>
+               <li>Of</li>
+               <li>Items</li>
+            </ol>
+            <ul>
+               <li>Unordered</li>
+               <li>List</li>
+               <li>Of</li>
+               <li>Items</li>
+            </ul>
+
+         </section>
+
+         <!-- Body section with HTML media elements -->
+         <section class="content-container">
+            <h1 id="part3">Media</h1>
+
+            <h2 id="part3-1">Images</h2>
+            <figure class="image-container">
+               <!-- Link your own images from the img folder or somewhere online -->
+               <img src="https://source.unsplash.com/1200x900/?ux" alt="This is an image." />
+               <figcaption>Image caption.</figcaption>
+            </figure>
+
+            <h2 id="part3-2">Videos</h2>
+            <figure class="video-container">
+               <!-- Replace the src URL, make sure to use the embed URL if linking from from youtube -->
+               <iframe src="https://www.youtube.com/embed/S1o41_oHSAg" frameborder="0" allow="autoplay; encrypted-media"
+                  allowfullscreen></iframe>
+               <figcaption>Video caption.</figcaption>
+            </figure>
+            <h2 id="part3-3">Prototypes</h2>
+            <figure class="prototype-container">
+               <!-- Replace the src URL, make sure to use the embed URL from Invision -->
+               <iframe src="https://invis.io/CQTG6CV3AKR" frameborder="0" allowfullscreen></iframe>
+               <figcaption>Prototype Caption.</figcaption>
+            </figure>
+
+
+         </section>
+
+
+
+      </article>
+   </main>
+
+   <!-- DO NOT modify the following code -->
+   <footer>
+      <a href="#top">
+         <svg class="icon-arrow-up">
+            <use xlink:href="#arrow"></use>
+         </svg>Back to top</a>
+      <div class="logo-container"><img src="img/USydLogo.svg" /></div>
+      <svg style="display: none;">
+         <defs>
+            <symbol id="arrow" viewBox="0 0 35 15">
+               <title>Arrow</title>
+               <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z " />
+            </symbol>
+         </defs>
+      </svg>
+   </footer>
+
+
+   <!-- Required imported js -->
+   <script src="js/scrollmenu.js"></script>
+   <script type="text/javascript">
+      new ScrollMenu('.aside-container a[href*="#"]', {
+         duration: 500,
+         activeOffset: 100,
+      })
+      new ScrollMenu('footer a[href*="#"], .content-container a[href*="#"]', {
+         duration: 500,
+      })
+   </script>
+
+
+</body>
+
+</html>
