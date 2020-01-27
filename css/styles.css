@@ -1,3 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+body {
+    width: 90%;
+    padding: 3em;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li:first-child {
+    margin-right: 40%;
+}
+
+
+li a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+  
+
+.project-cards {
+    width: 20em;
+    height: auto;
+    border-radius: 0.5em;
+    transition: 0.3s ease-in-out;
+}
+
+.project-cards:hover {
+    transform: scale(1.1);
+}
+
 
