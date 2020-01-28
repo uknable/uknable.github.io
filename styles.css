@@ -1,94 +1,85 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+@font-face {
+    font-family: "NunitoSans-Bold";
+    src: url("fonts/NunitoSans-Bold.ttf");
 }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
+@font-face {
+    font-family: "NunitoSans-Light";
+    src: url("fonts/NunitoSans-Light.ttf");
 }
 
-
-/* END OF RESET */
+@font-face {
+    font-family: "NunitoSans-Regular";
+    src: url("fonts/NunitoSans-Regular.ttf");
+}
 
 body {
-    width: 90%;
-    padding: 3em;
+    padding-top: 2%;
+    font-family: "NunitoSans-Light", sans-serif;
+}
+
+nav {
+    font-family: "NunitoSans-Regular", sans-serif;
 }
 
 header nav ul {
+    padding: 2em 10%;
     display: flex;
-    flex-direction: row;
+    text-align: center;
 }
 
 ul li:first-child {
-    margin-right: 40%;
+    flex-grow: 10;
+    text-align: left;
 }
 
+li {
+    flex-grow: 1;
+    text-align: right;
+}
 
 li a {
     color: black;
-    padding: 16px;
     text-decoration: none;
 }
-  
+
+article {
+    text-align: center;
+}
+
+.project-row {
+    text-align: center;
+}
 
 .project-cards {
-    width: 20em;
-    height: auto;
-    border-radius: 0.5em;
-    transition: 0.3s ease-in-out;
+    text-align: center;
+    /* margin-bottom: 3%; */
+    /* vertical-align: center; */
 }
 
-.project-cards:hover {
-    transform: scale(1.1);
+.project-cards img {
+    width: 20%;
+    margin: 1em 2em;
+    border-radius: 0.2em;
+    transition: 0.2s ease-in-out;
 }
 
+.project-cards img:hover {
+    transform: scale(1.03);
+}
 
+.card-text {
+    width: 25%;
+    margin-top: 2%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.right-card {
+    text-align: right;
+}
+
+.card-text h1 {
+    font-family: "NunitoSans-Bold", sans-serif;
+}
