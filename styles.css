@@ -29,7 +29,6 @@ body {
 
 nav {
     font-family: "Nunito-Regular", sans-serif;
-    font-size: 1.1em;
 }
 
 header nav ul {
@@ -86,7 +85,6 @@ article {
     display: inline-block;
     text-align: left;
     vertical-align: top;
-    font-size: 1.1em;
 }
 
 .card-text h1 {
