@@ -29,6 +29,7 @@ body {
 
 nav {
     font-family: "Nunito-Regular", sans-serif;
+    margin-bottom: 2em;
 }
 
 header nav ul {
@@ -55,10 +56,6 @@ li a {
 
 article {
     text-align: center;
-}
-
-.project-cards:first-child {
-    padding-top: 2em;
 }
 
 .project-cards {
