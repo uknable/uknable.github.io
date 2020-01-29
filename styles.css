@@ -10,13 +10,13 @@
 }
 
 @font-face {
-    font-family: "NunitoSans-Light";
-    src: url("fonts/NunitoSans-Light.ttf");
+    font-family: "Nunito-Light";
+    src: url("fonts/Nunito-Light.ttf");
 }
 
 @font-face {
-    font-family: "NunitoSans-Regular";
-    src: url("fonts/NunitoSans-Regular.ttf");
+    font-family: "Nunito-Regular";
+    src: url("fonts/Nunito-Regular.ttf");
 }
 
 html {
@@ -24,11 +24,12 @@ html {
 }
 
 body {
-    font-family: "NunitoSans-Light", sans-serif;
+    font-family: "Nunito-Light", sans-serif;
 }
 
 nav {
-    font-family: "NunitoSans-Regular", sans-serif;
+    font-family: "Nunito-Regular", sans-serif;
+    font-size: 1.1em;
 }
 
 header nav ul {
@@ -85,10 +86,16 @@ article {
     display: inline-block;
     text-align: left;
     vertical-align: top;
+    font-size: 1.1em;
+}
+
+.card-text h1 {
+    font-family: "NunitoSans-Bold", sans-serif;
+    font-size: 1.1em;
 }
 
 .card-text p {
-    line-height: 1.8em;
+    line-height: 1.7em;
 }
 
 .card-text a {
@@ -119,8 +126,4 @@ article {
 
 .right-card {
     text-align: right;
-}
-
-.card-text h1 {
-    font-family: "NunitoSans-Bold", sans-serif;
 }
