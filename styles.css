@@ -1,3 +1,9 @@
+:root {
+    --bgColor: #e5ddf7;
+    --buttonColor: rgb(78, 70, 225);
+    --shadColor: #c5bed4;
+}
+
 @font-face {
     font-family: "NunitoSans-Bold";
     src: url("fonts/NunitoSans-Bold.ttf");
@@ -13,8 +19,11 @@
     src: url("fonts/NunitoSans-Regular.ttf");
 }
 
+html {
+    background-color: var(--bgColor);
+}
+
 body {
-    padding-top: 2%;
     font-family: "NunitoSans-Light", sans-serif;
 }
 
@@ -23,6 +32,7 @@ nav {
 }
 
 header nav ul {
+    background-color: white;
     padding: 2em 10%;
     display: flex;
     text-align: center;
@@ -47,14 +57,13 @@ article {
     text-align: center;
 }
 
-.project-row {
-    text-align: center;
+.project-cards:first-child {
+    padding-top: 2em;
 }
 
 .project-cards {
     text-align: center;
-    /* margin-bottom: 3%; */
-    /* vertical-align: center; */
+    margin-bottom: 2em;
 }
 
 .project-cards img {
@@ -62,19 +71,51 @@ article {
     margin: 1em 2em;
     border-radius: 0.2em;
     transition: 0.2s ease-in-out;
+    box-shadow: 2px 2px 4px var(--shadColor);
 }
 
 .project-cards img:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 0 white;
 }
 
 .card-text {
-    width: 25%;
-    margin-top: 2%;
+    width: 25em;
+    margin-top: 1em;
     display: inline-block;
     text-align: left;
     vertical-align: top;
 }
+
+.card-text p {
+    line-height: 1.8em;
+}
+
+.card-text a {
+    font-family: "NunitoSans-Bold", sans-serif;
+    text-decoration: none;
+    color: var(--buttonColor);
+    transition: 0.1s ease-in-out;
+}
+
+.card-text a:hover {
+    border-bottom: 3px solid var(--buttonColor);
+}
+
+
+/* 
+.card-text button {
+    border: none;
+    background-color: white;
+    padding: 1em 2em;
+    border-radius: 1em;
+    font-family: "NunitoSans-Bold", sans-serif;
+    transition: 0.1s ease-in-out;
+}
+
+.card-text button:hover {
+    background-color: green;
+} */
 
 .right-card {
     text-align: right;
