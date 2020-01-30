@@ -1,7 +1,9 @@
 :root {
-    --bgColor: #e5ddf7;
-    --buttonColor: rgb(78, 70, 225);
+    --bgColor: #F6E7FE;
+    --buttonColor: #2352E5;
+    /* --buttonColor: rgb(78, 70, 225); */
     --shadColor: #c5bed4;
+    --borderRadius: 0.2em;
 }
 
 @font-face {
@@ -39,6 +41,11 @@ header nav ul {
     text-align: center;
 }
 
+h1 {
+    font-family: "NunitoSans-Bold", sans-serif;
+    font-size: 1.1em;
+}
+
 ul li:first-child {
     flex-grow: 10;
     text-align: left;
@@ -54,9 +61,16 @@ li a {
     text-decoration: none;
 }
 
-article {
+
+main {
     text-align: center;
 }
+
+article {
+    text-align: left;
+    margin-left: 5em;
+}
+
 
 .project-cards {
     text-align: center;
@@ -66,7 +80,7 @@ article {
 .project-cards img {
     width: 25em;
     margin: 1em 2em;
-    border-radius: 0.2em;
+    border-radius: var(--borderRadius);
     transition: 0.2s ease-in-out;
     box-shadow: 2px 2px 4px var(--shadColor);
 }
@@ -84,11 +98,6 @@ article {
     vertical-align: top;
 }
 
-.card-text h1 {
-    font-family: "NunitoSans-Bold", sans-serif;
-    font-size: 1.1em;
-}
-
 .card-text p {
     line-height: 1.7em;
 }
@@ -104,21 +113,22 @@ article {
     border-bottom: 3px solid var(--buttonColor);
 }
 
-
-/* 
-.card-text button {
-    border: none;
-    background-color: white;
-    padding: 1em 2em;
-    border-radius: 1em;
-    font-family: "NunitoSans-Bold", sans-serif;
-    transition: 0.1s ease-in-out;
-}
-
-.card-text button:hover {
-    background-color: green;
-} */
-
 .right-card {
     text-align: right;
+}
+
+.itch-frame {
+    margin-bottom: 5em;
+}
+
+article h1 {
+    text-align: left;
+}
+
+code {
+    background-color: white;
+    display: inline-block;
+    border-radius: var(--borderRadius);
+    margin: 2em 0;
+    padding: 1em 2em;
 }
