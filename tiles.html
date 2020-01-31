@@ -72,9 +72,24 @@
                 </code>
                 <code>
                     <i>// Node</i>
-                    <br>
-                    <br>
-                    (note to self: don't forget to put code in here)
+                    <br><br>
+                    app.get('/board_state', (request, response) => {
+                    <br><br>
+                    &emsp; &emsp; pool.query('SELECT * FROM board_state')
+                        <br><br>
+                        &emsp; &emsp; .then((res) => {
+                            <br><br>
+                            &emsp; &emsp; &emsp; &emsp;     response.json({ info: res.rows })
+                            <br><br>
+                            &emsp; &emsp; })
+                        <br><br>
+                        &emsp; &emsp; .catch((err) => {
+                            <br><br>
+                            &emsp; &emsp; &emsp; &emsp;     console.log(err)
+                            <br><br>
+                            &emsp; &emsp; })
+                        <br><br>
+                    })
                 </code>
                 <p>Then parse result in Godot and draw the board state.</p>
                 <code>
@@ -131,6 +146,29 @@
                 <code>
                     <i>// Node</i>    
                     <br><br>
+                    app.put('/puzzle_solved', (request, response) => {
+                        <br><br>
+                        &emsp; &emsp;const { xPos, yPos } = request.body
+                        <br><br>
+                        &emsp; &emsp;console.log(xPos, yPos)
+                        <br><br>
+                        &emsp; &emsp;var queryText = `UPDATE board_state SET solved=solved+1, in_progress=in_progress-1 WHERE tile='{${xPos}, ${yPos}}' AND solved&lt;3`
+                        <br><br>
+                        &emsp; &emsp;pool.query(queryText)
+                        <br><br>
+                        &emsp; &emsp;.then((res) => {
+                            <br><br>
+                            &emsp; &emsp;&emsp; &emsp;    response.json ({ info: res })
+                            <br><br>
+                            &emsp; &emsp;})
+                        <br><br>
+                        &emsp; &emsp;.catch((err) => {
+                            <br><br>
+                            &emsp; &emsp;&emsp; &emsp;    console.log(err)
+                            <br><br>
+                            &emsp; &emsp;})
+                        <br><br>
+                    })
                 </code>
 
                 <p>
@@ -142,6 +180,25 @@
                 <code>
                     <i>// Node</i>    
                     <br><br>
+                    app.get('/board_state_reset', (request, response) => {
+                        <br><br>
+                        &emsp; &emsp;const queryText = 'UPDATE board_state SET solved=0'
+                        <br><br>
+                        &emsp; &emsp;pool.query(queryText)
+                        <br><br>
+                        &emsp; &emsp;.then((res) => {
+                            <br><br>
+                            &emsp; &emsp;&emsp; &emsp;response.json ({ info: res })
+                            <br><br>
+                            &emsp; &emsp;})
+                        <br><br>
+                        &emsp; &emsp;.catch((err) => {
+                            <br><br>
+                            &emsp; &emsp;&emsp; &emsp;console.log(err)
+                            <br><br>
+                            &emsp; &emsp;})
+                        <br><br>
+                    })
                 </code>
                 <br><br>
                 <p>The repository to all the code can be found <a href="https://github.com/uknable/multiplayeraround">here.</a></p>  
