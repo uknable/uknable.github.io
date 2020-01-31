@@ -3,10 +3,14 @@
     --buttonColor: #2352E5;
     --shadColor: #c9c9c9;
 
-    --borderRadius: 0.2em;
+    --headerVertPadding: 1.5em;
     --paragraphSpace: 1.3em;
     --cardSpacing: 5em;
+
     --sidePadding: 10%;
+    --borderRadius: 0.2em;
+
+    --projectTitleSize: 2em;
 }
 
 @font-face {
@@ -25,6 +29,11 @@
 }
 
 @font-face {
+    font-family: "Nunito-Bold";
+    src: url("fonts/Nunito-Bold.ttf");
+}
+
+@font-face {
     font-family: "RobotoMono-Regular";
     src: url("fonts/RobotoMono-Regular.ttf");
 }
@@ -37,14 +46,21 @@ body {
     font-family: "Nunito-Light", sans-serif;
 }
 
-nav {
+nav a, nav li {
     font-family: "Nunito-Regular", sans-serif;
+}   
+
+nav a:hover {
+    border-bottom: 3px solid black;
+}
+
+nav {
     margin-bottom: calc(3 * var(--paragraphSpace));
 }
 
 header nav ul {
     background-color: white;
-    padding: 1.5em var(--sidePadding);
+    padding: var(--headerVertPadding) var(--sidePadding);
     display: flex;
     text-align: center;
 }
@@ -125,9 +141,7 @@ article {
     vertical-align: top;
 }
 
-
-
-.card-text a {
+.card-text a, section a {
     font-family: "NunitoSans-Bold", sans-serif;
     text-decoration: none;
     color: var(--buttonColor);
@@ -135,7 +149,7 @@ article {
 }
 
 
-.card-text a:hover {
+.card-text a:hover, section a:hover {
     border-bottom: 3px solid var(--buttonColor);
 }
 
@@ -160,28 +174,49 @@ code {
     font-family: "RobotoMono-Regular", serif;
     font-size: 0.8em;
     background-color: white;
-    display: inline-block;
+    display: block;
     border-radius: var(--borderRadius);
+    margin: var(--paragraphSpace) 0;
     padding: var(--paragraphSpace);
 }
 
 figure {
     text-align: center;
+    margin: var(--paragraphSpace) 0;
 }
 
 figure img {
-    width: 100%;
+    width: 70%;
+    margin-top: var(--paragraphSpace);
     border-radius: var(--borderRadius);
     box-shadow: 2px 2px 4px var(--shadColor);
     transition: 0.2s ease-in-out;
 }
 
-figure img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 0 white;
+#tiles-wireflow:hover {
+    transform: scale(1.7);
 }
 
 figure figcaption {
     font-size: 0.9em;
     padding: calc(0.1 * var(--paragraphSpace)) 0 var(--paragraphSpace) 0;
 }
+
+b {
+    font-family: "Nunito-Bold", serif;
+}
+
+code i {
+    font-style: italic;
+    color: grey;
+}
+
+.project-title {
+    font-size: var(--projectTitleSize);
+}
+
+
+footer {
+    padding: calc(2 * var(--headerVertPadding)) 0;
+}
+

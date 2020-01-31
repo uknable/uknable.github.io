@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li>
-                    <h1>andrew le</h1>
+                    andrew le
                 </li>
                 <li><a href="index.html">projects</a></li>
                 <li><a href="index.html">contact</a></li>
@@ -30,23 +30,125 @@
 
     <main>
         <article class="project-article">
-            
-            <h1>Visibility Tile Flip</h1>
-            <p>This project was our response to the project brief, which was to  work on a prototype for improving accessibility or inclusiveness in cities.
-            As a group, we decided to raise awareness for the visually impaired.</p>
-            <p>The concept consists of a large display that can be interacted with via mobile device by scanning a nearby QR code.</p>
-            <figure>
-                <img src="img/tiles_concept.png" alt="Visibility Tile Flip concept illustration">
-                <figcaption>Concept illustration by Gabriella Hartono.</figcaption>
-            </figure>
-            <p>My main responsibility for the project was to code the prototype.</p>
-            <figure>
-                <img src="img/tiles_wireflow.png" alt="Visibility Tile Flip process wireflow.">
-                <figcaption>Wireflow of the full-stack system.</figcaption>
-            </figure>
+            <section class="title-container">
+                <h1 class="project-title">Visibility Tile Flip</h1>
+            </section>
 
+            <section>
+                <h1>Context</h1>
+                <p>This project was our response to the project brief, which was to  work on a prototype for improving accessibility or inclusiveness in cities.
+                As a group, we decided to raise awareness for the visually impaired.</p>
+                <p>The concept consists of a central display that can be interacted with via mobile device by scanning a nearby QR code.</p>
+                <p>
+                    An object would then be shown on their mobile devices which users had to correctly guess. The difficulty lies in the filter that would be placed upon the object, that partially concealed the details of the object in a way that simulated what it is like to have a particular kind of visual impairment.
+                </p>
+                <p>
+                    After correctly guessing the object, the central display will be updated to allow everyone participating to see the overall progress in real time.
+                </p>
+                <figure>
+                    <img src="img/tiles_concept.png" alt="Visibility Tile Flip concept illustration">
+                    <figcaption>Concept illustration by Gabriella Hartono.</figcaption>
+                </figure>
+                <p>My main responsibility for the project was to code the prototype.</p>
+            </section>
             
-            <code>// Your code goes in here.</code>
+            <section>
+                <h1>How does the code work?</h1>
+                
+                <figure>
+                    <img id="tiles-wireflow" src="img/tiles_wireflow.png" alt="Visibility Tile Flip process wireflow.">
+                    <figcaption>Wireflow of the full-stack system.</figcaption>
+                </figure>
+                <p>The stack consists of a Godot game engine front-end, with a Node.js middle-ware and SQL database uploaded the Heroku cloud.</p>
+                
+                <p><b>Upon entering the board state,</b> Godot sends a GET request to the server to pull the board state from the database.</p>
+                <code>
+                    <i>// Godot</i>    
+                    <br><br>
+                    func getBoardState():
+                    <br><br>
+                    &emsp; &emsp; $GetBoardState.request("https://sleepy-sands-19230.herokuapp.com/board_state")
+                    <br><br><br>
+                </code>
+                <code>
+                    <i>// Node</i>
+                    <br>
+                    <br>
+                    (note to self: don't forget to put code in here)
+                </code>
+                <p>Then parse result in Godot and draw the board state.</p>
+                <code>
+                    <i>// Godot</i>    
+                    <br><br>
+                    func _on_GetBoardState_request_completed(result, response_code, headers, body):
+                    <br><br>
+                    &emsp; &emsp; var json = JSON.parse(body.get_string_from_utf8())
+                    <br><br>
+                    &emsp; &emsp; board_state = json.result.get('info')
+                    <br><br><br>
+                    &emsp; &emsp; <i>// drawing code here</i>
+                    <br><br><br>
+                    &emsp; &emsp; checkIfCompleted(board_state)
+                </code>
+
+                <p>
+                    <b>When the player taps on a tile,</b> Godot changes scenes and a random image, filter, question and answer is displayed.
+                </p>
+
+                <code>
+                    <i>// Godot</i>    
+                    <br><br>
+                    var objects = [ <i>objects here</i> ]
+                    <br><br>
+                    var object
+                    <br><br><br>
+                    func _ready():
+                    <br><br>
+                    &emsp; &emsp; object = objects[randi() % objects.size()]
+                    <br><br><br>
+                    &emsp; &emsp;<i>// draw object on the screen</i>
+                </code>
+
+                <p>
+                    <b>If the player types the answer in correctly,</b> a PUT request is made to Node to update the board state in the database.
+                </p>
+                <code>
+                    <i>// Godot</i>    
+                    <br><br>
+                    func updateSolved():
+                    <br><br>
+                    &emsp; &emsp;var http = HTTPClient.new()
+                    <br><br><br>
+                    &emsp; &emsp;<i>// query validation code here</i>
+                    <br><br><br>
+                    &emsp; &emsp;http.request(
+                        HTTPClient.METHOD_PUT,
+                        "/puzzle_solved",
+                        <i>headers,</i> 
+                        <i>queryString</i> 
+                    )
+                </code>
+                <code>
+                    <i>// Node</i>    
+                    <br><br>
+                </code>
+
+                <p>
+                    The player is brought back to the board screen where the player picks another tile to work on.
+                </p>
+
+                <p><b>After all the tiles are flipped,</b> the screen will display information about the visually impaired and the board state will reset.</p>
+            
+                <code>
+                    <i>// Node</i>    
+                    <br><br>
+                </code>
+                <br><br>
+                <p>The repository to all the code can be found <a href="https://github.com/uknable/multiplayeraround">here.</a></p>  
+                
+            
+            </section>
+            
 
         
 
