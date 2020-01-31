@@ -215,6 +215,9 @@ code i {
     font-size: var(--projectTitleSize);
 }
 
+section {
+    margin-bottom: 5em;
+}
 
 footer {
     padding: calc(2 * var(--headerVertPadding)) 0;
@@ -222,4 +225,14 @@ footer {
 
 .active {
     border-bottom: 3px solid black;
+}
+
+.video-container {
+    text-align: center;
+    padding: calc(0.1 * var(--paragraphSpace)) 0 var(--paragraphSpace) 0;
+}
+
+video {
+    width: 70%;
+    
 }
