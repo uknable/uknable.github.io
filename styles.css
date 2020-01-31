@@ -24,6 +24,11 @@
     src: url("fonts/Nunito-Regular.ttf");
 }
 
+@font-face {
+    font-family: "RobotoMono-Regular";
+    src: url("fonts/RobotoMono-Regular.ttf");
+}
+
 html {
     background-color: var(--bgColor);
 }
@@ -34,7 +39,7 @@ body {
 
 nav {
     font-family: "Nunito-Regular", sans-serif;
-    margin-bottom: var(--cardSpacing);
+    margin-bottom: calc(3 * var(--paragraphSpace));
 }
 
 header nav ul {
@@ -47,6 +52,10 @@ header nav ul {
 h1 {
     font-family: "NunitoSans-Bold", sans-serif;
     font-size: 1.1em;
+}
+
+p {
+    line-height: 1.5em;
 }
 
 ul li:first-child {
@@ -84,7 +93,6 @@ main p {
 
 article {
     text-align: left;
-    /* margin-left: 5em; */
 }
 
 .project-cards:first-child {
@@ -117,9 +125,7 @@ article {
     vertical-align: top;
 }
 
-.card-text p {
-    line-height: 1.7em;
-}
+
 
 .card-text a {
     font-family: "NunitoSans-Bold", sans-serif;
@@ -151,9 +157,14 @@ article h1 {
 }
 
 code {
+    font-family: "RobotoMono-Regular", serif;
+    font-size: 0.8em;
     background-color: white;
     display: inline-block;
     border-radius: var(--borderRadius);
-    margin: 2em 0;
-    padding: 1em 2em;
+    padding: var(--paragraphSpace);
+}
+
+.project-article {
+    
 }
