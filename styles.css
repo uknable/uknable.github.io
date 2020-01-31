@@ -1,9 +1,12 @@
 :root {
     --bgColor: #F6E7FE;
     --buttonColor: #2352E5;
-    /* --buttonColor: rgb(78, 70, 225); */
+    
     --shadColor: #c5bed4;
     --borderRadius: 0.2em;
+    --paragraphSpace: 1.3em;
+    --cardSpacing: 5em;
+    --sidePadding: 10%;
 }
 
 @font-face {
@@ -31,12 +34,12 @@ body {
 
 nav {
     font-family: "Nunito-Regular", sans-serif;
-    margin-bottom: 2em;
+    margin-bottom: var(--cardSpacing);
 }
 
 header nav ul {
     background-color: white;
-    padding: 2em 10%;
+    padding: 1.5em var(--sidePadding);
     display: flex;
     text-align: center;
 }
@@ -63,18 +66,34 @@ li a {
 
 
 main {
+    padding: 0 var(--sidePadding);
     text-align: center;
+}
+
+main h1:first-child {
+    margin-bottom: var(--paragraphSpace);
+}
+
+main h1 {
+    margin-bottom: var(--paragraphSpace);
+}
+
+main p {
+    margin-bottom: var(--paragraphSpace);
 }
 
 article {
     text-align: left;
-    margin-left: 5em;
+    /* margin-left: 5em; */
 }
 
+.project-cards:first-child {
+    margin: var(--cardSpacing) 0;
+}
 
 .project-cards {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: var(--cardSpacing);
 }
 
 .project-cards img {
@@ -109,6 +128,7 @@ article {
     transition: 0.1s ease-in-out;
 }
 
+
 .card-text a:hover {
     border-bottom: 3px solid var(--buttonColor);
 }
@@ -117,8 +137,13 @@ article {
     text-align: right;
 }
 
+.iframe-container {
+    text-align: center;
+}
+
 .itch-frame {
     margin-bottom: 5em;
+    background-color: white;
 }
 
 article h1 {
