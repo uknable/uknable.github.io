@@ -220,3 +220,6 @@ footer {
     padding: calc(2 * var(--headerVertPadding)) 0;
 }
 
+.active {
+    border-bottom: 3px solid black;
+}
