@@ -1,8 +1,8 @@
 :root {
-    --bgColor: #F6E7FE;
+    --bgColor: #FFF9F5;
     --buttonColor: #2352E5;
-    
-    --shadColor: #c5bed4;
+    --shadColor: #c9c9c9;
+
     --borderRadius: 0.2em;
     --paragraphSpace: 1.3em;
     --cardSpacing: 5em;
@@ -165,6 +165,23 @@ code {
     padding: var(--paragraphSpace);
 }
 
-.project-article {
-    
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    border-radius: var(--borderRadius);
+    box-shadow: 2px 2px 4px var(--shadColor);
+    transition: 0.2s ease-in-out;
+}
+
+figure img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 white;
+}
+
+figure figcaption {
+    font-size: 0.9em;
+    padding: calc(0.1 * var(--paragraphSpace)) 0 var(--paragraphSpace) 0;
 }
