@@ -7,7 +7,7 @@
     --paragraphSpace: 1.3em;
     --cardSpacing: 5em;
 
-    --sidePadding: 10%;
+    --sidePadding: 5%;
     --borderRadius: 0.2em;
 
     --projectTitleSize: 2em;
@@ -46,6 +46,11 @@ body {
     font-family: "Nunito-Light", sans-serif;
 }
 
+header {
+    width: 100%;
+}
+
+
 nav a, nav li {
     font-family: "Nunito-Regular", sans-serif;
 }   
@@ -81,7 +86,7 @@ ul li:first-child {
 
 li {
     flex-grow: 1;
-    text-align: right;
+    text-align: center;
 }
 
 li a {
@@ -235,4 +240,18 @@ footer {
 video {
     width: 70%;
     
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 850px) {
+
+    .project-cards {
+        padding: 0;
+    }
+
+    .project-cards img {
+        margin: 1em 0;
+    }
+
 }
