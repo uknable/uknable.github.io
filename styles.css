@@ -239,11 +239,7 @@ video {
 /* Media Queries */
 
 @media screen and (max-width: 500px) {
-
-    .project-cards {
-        padding: 0;
-    }
-
+    
     .project-cards img {
         display: inline-block;
         width: 90%;
