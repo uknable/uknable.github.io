@@ -1,6 +1,7 @@
 let cards = document.getElementsByClassName("project-cards");
 
-let cardNames = ["facade", "tiles", "flower", "poem", "earth"];
+let cardNames = ["facade", "tiles", "flower", "poem"];
+// let cardNames = ["facade", "tiles", "flower", "poem", "earth"];
 
 
 
