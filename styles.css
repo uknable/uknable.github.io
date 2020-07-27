@@ -7,7 +7,7 @@
     --paragraphSpace: 1.3em;
     --cardSpacing: 5em;
 
-    --sidePadding: 5%;
+    --sidePadding: 20%;
     --borderRadius: 0.2em;
 
     --projectTitleSize: 2em;
@@ -244,6 +244,11 @@ video {
 
 @media screen and (max-width: 500px) {
     
+    :root {
+        --sidePadding: 10%;
+    }
+
+
     .project-cards img {
         display: inline-block;
         width: 90%;
