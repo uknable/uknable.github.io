@@ -34,6 +34,11 @@
 }
 
 @font-face {
+    font-family: "Nunito-ExtraBold";
+    src: url("fonts/Nunito-ExtraBold.ttf");
+}
+
+@font-face {
     font-family: "RobotoMono-Regular";
     src: url("fonts/RobotoMono-Regular.ttf");
 }
@@ -43,7 +48,7 @@ html {
 }
 
 body {
-    font-family: "Nunito-Light", sans-serif;
+    font-family: "Nunito-Regular", sans-serif;
 }
 
 nav a, nav li {
@@ -65,8 +70,8 @@ header nav ul {
 }
 
 h1 {
-    font-family: "NunitoSans-Bold", sans-serif;
-    font-size: 1.1em;
+    font-family: "Nunito-ExtraBold", sans-serif;
+    font-size: 1em;
 }
 
 p {
@@ -247,7 +252,6 @@ video {
     :root {
         --sidePadding: 10%;
     }
-
 
     .project-cards img {
         display: inline-block;
