@@ -7,7 +7,7 @@
     --paragraphSpace: 1.3em;
     --cardSpacing: 5em;
 
-    --sidePadding: 20%;
+    --sidePadding: 22%;
     --borderRadius: 0.2em;
 
     --projectTitleSize: 2em;
@@ -69,9 +69,26 @@ header nav ul {
     display: flex;
 }
 
+.banner {
+    position: relative;
+}
+
+.banner-image {
+    /* height: 200px; */
+    width: 100%;
+}
+
+.project-title {
+    /* padding: 0 var(--sidePadding); */
+    font-size: var(--projectTitleSize);
+    /* position: absolute;
+    bottom: 2em; */
+}
+
 h1 {
     font-family: "Nunito-ExtraBold", sans-serif;
     font-size: 1em;
+    color: #313131;
 }
 
 p {
@@ -219,12 +236,10 @@ code i {
     color: grey;
 }
 
-.project-title {
-    font-size: var(--projectTitleSize);
-}
+
 
 section {
-    margin-bottom: 5em;
+    margin-bottom: 4em;
 }
 
 footer {
@@ -253,6 +268,11 @@ video {
         --sidePadding: 10%;
     }
 
+    .banner-image {
+        /* height: 200px; */
+        width: 500px;
+    }
+
     .project-cards img {
         display: inline-block;
         width: 90%;
@@ -262,6 +282,10 @@ video {
     .card-text {
         display: inline-block;
         width: 90%;
+    }
+
+    section {
+        margin-bottom: 2em;
     }
 
     p {
