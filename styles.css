@@ -110,6 +110,15 @@ li a {
     text-decoration: none;
 }
 
+.bullet-points {
+    list-style-type: circle;
+}
+
+.bullet-points li {
+    text-align: left;
+    margin-top: .5em;
+    margin-left: 3em;
+}
 
 main {
     padding: 0 var(--sidePadding);
@@ -207,11 +216,16 @@ figure {
 }
 
 figure img {
-    width: 70%;
+    width: 100%;
     margin-top: var(--paragraphSpace);
     border-radius: var(--borderRadius);
     box-shadow: 2px 2px 4px var(--shadColor);
     transition: 0.2s ease-in-out;
+}
+
+figure img:hover {
+    transform: scale(1.7);
+    cursor: zoom-in;
 }
 
 figure.sidebyside img {

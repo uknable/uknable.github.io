@@ -36,107 +36,140 @@
         
         <article class="project-article">
             <section class="title-container">
-                <h1 class="project-title">Diagnosing Heart Deformities eLearning Module</h1>
+                <h1 class="project-title">Diagnosing Heart Deformities - eLearning Module</h1>
             </section>
 
             <section>
                 <section>
                     <p>
-                        In collaboration with the Children’s Hospital and Westmead Clinical School, we designed and developed an interactive online module to help medical students learn how to diagnose congenital heart deformities in babies.
-                    </p>
-                </section>
-
-
-                <section>
-                    <h1>Team and Role</h1>
-                    <p>
-                        The team consisted of three design students each with our own specialisations: back-end developer, front-end developer and visual designer/illustrator.
-    
-                        My role as the back end-developer was to implement a content management system, allowing content to be shown dynamically in the application in a timely manner while also ensuring that the content can be easily changed in the future. 
-    
-                        The interaction design role was shared amongst the team. 
-                    </p>
+                        An interactive online module for second-year medical students learning how to diagnose congenital heart deformities in babies.                     </p>
                 </section>
 
                 <section>
-                    <h1>Brief</h1>
+                    <h1>Background Information</h1>
                     <p>
-                        The Children’s Hospital at Westmead Clinical School have been using waxed samples from deceased babies with congenital heart deformities to teach their students. These samples deteriorate overtime and are difficult to replace. Also, students in rural areas do not have access to these samples. The teachers at the hospital decided that 3D printed versions of the hearts will replace the waxed samples. We were tasked with designing a supplementary learning module to teach medical students how to diagnose these hearts. The content of the module should be editable by the teachers themselves if they feel the need to update any information.
+                        Traditional teaching of anatomy and pathology includes practical sessions with cadaveric
+                        samples. The Children’s Hospital at Westmead Clinical School have been using waxed heart samples from deceased babies with congenital heart deformities to teach 300 medical students every year. These samples degrade overtime and are less available due to improvements in screening and surgery. 
+                    </p>
+                    <p>
+                        The school aimed to use 3D-printed versions of the heart samples but also wanted us to design an interactive, enquiry-based learning module to supplement the samples.
                     </p>
                 </section>
 
                 <section>
                     <h1>Problems</h1>
+                    <p>Heart samples degrade overtime and are less available due to improvements in screening and surgery yet the increasing number of students each year increases their demand.</p>
+                    <p>Students in rural areas do not have access to the samples.</p>
+                    <p>Students are left to explore the samples independently after watching an old video about heart formation.</p>
+                </section>
+
+                <section>
+                    <h1>Team and Role</h1>
                     <p>
-                        Lack of resources - deteriorating heart samples, increasing number of students, improving medical procedures means that less babies die.
-                        <br>
-                        Lack of accessibility - students in rural areas do not have access to the samples.
-                        <br>
-                        Lack of structure to the learning activity -  students would watch an old video about heart deformities and how to diagnose them, after which they would explore the samples on their own with pipe cleaners.
+                        The team consisted of a back-end developer, front-end developer and visual designer/illustrator.
+                    </p>
+                    <p>
+                        <ul class="bullet-points">As the back end-developer, I was responsible for: 
+                            <li>Choosing an appropriate content management system for the project</li>
+                            <li>Writing the code that allows for the content to be loaded quickly and dynamically</li>
+                            <li>Ensuring that the code is written in a way that allows the content can be easily changed via the CMS</li>
+                            <li>Creating documentation showing the client how to edit the content</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        <ul class="bullet-points">The interaction design responsiblities were shared amongst the team:
+                            <li>Defining the brief</li>
+                            <li>Creating wireflows and wireframes</li>
+                            <li>Creating personas</li>
+                            <li>Prototyping and testing</li>
+                            <li>Consulting with the client and incorporating feedback</li>
+                        </ul>
                     </p>
                 </section>
+
 
                 <section>
                     <h1>Users</h1>
-                    <p>
-                        The front-end users are second year medical students learning about congenital heart deformities in babies. Students in the classroom will be using an iPad to access the module that should take about 30 minutes to complete.
-                        <br>
-    The back-end users are experienced doctors who may be older and might not have much coding experience. 
-                    </p>
+                    <p>The front-end users are second year medical students learning about congenital heart deformities in babies. Students in the classroom will be using an iPad to access the module that should take about 30 minutes to complete.</p>
+                    <p>The back-end users are experienced doctors who may be older and might not have much coding experience.</p>
                 </section>
 
-                <section>
+                <section>   
                     <h1>Process</h1>
-                    <p>
-                        We started with a wireflow to understand what we screens needed and how to transition between them.
-                    </p>
+
+                    <p>The client provided a document containing the content of the module which used to create the wireflow. The module consists of four cases with each case divided into three sections: case details, exploration and explanation.</p>
+                    
                     <figure>
                         <img src="img/hearts/hearts_wireflow.png" alt="Wireflow">
                     </figure>
-    
+
+                    <p>We then did rough sketches to see what the screens could look like.</p>
+
+                    <figure>
+                        <img src="img\hearts\hearts-wireframes.png" alt="Wireframes">
+                    </figure>
+
+                    <p>Prototyped on Figma to test the pacing and the positioning of the different elements.</p>
+
+                    <figure>
+                        <img src="img\hearts\hearts-figma.png" alt="Prototyped on Figma">
+                    </figure>
+
                     <p>
-                        Prototyped our wireframes on Figma to test the pacing and refine the positioning of the elements
+                        We received feedback saying that the case number next to the names (e.g. Case number #17040, Ben’s Story) should be removed, leaving only the name to make the journey feel more personable. From this point on, the visual design took on a very friendly aesthetic. We also decided to design for landscape orientation since the students will be using iPads.
                     </p>
-                    <figure class="sidebyside">
-                        <img src="img/hearts/hearts_wireframe1.png" alt="">
-                        <img src="img/hearts/hearts_wireframe2.png" alt="">
-                    </figure>    
+
+                    <figure>INSERT HI-FI here
+                        <img src="" alt="">
+                    </figure>
+                </section>
+                
+                <section>
+                    <h1>Interaction Design</h1>
+                    
+                    <p>An interactive, virtual representation of the heart addresses the problem of accessibility to the heart sample, especially for students not present for the practical session to view the printed models in person. </p>
+                    
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos\hearts_interaction.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>The camera orientates itself to show students how to look at the heart according to the current instruction. This provides structure to the module and direct guidance for students, a lack of which were problems of how the module was conducted previously. </p>
+                    
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos\hearts_orientation.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>Structure and guidance is also provided by labels pointing to the relevant features of the heart. These disappear when features are out of view and can be toggled on and off by the student. </p>
+                    
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos\hearts_labels.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>Words that are underlined can be hovered over to reveal further information on the page, which lessens the need to look for information elsewhere.</p>
+                
+                    <div class="video-container">
+                        <video controls>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
                 </section>
 
                 <section>
-                    <h1>Interaction Design</h1>
+                    <h1>Outcome</h1>
                     <p>
-                        The camera automatically orientates itself when the student clicks through to different steps. This shows them how to look at the heart according to the instruction they’ve been given on the left-hand side of the page. The movement of the camera from one location to the next hints as to where the new location is in relation to the previous.
+                        After completing the project, our team was invited to present our design to the Sydney Medical School MD2020 Education Showcase where it was very well received. Hopefully there will be more collaborations between the Sydney School of Design and the Westmead Clinical School.
                     </p>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/hearts_orientation.mp4" type="video/mp4">
-                        </video>
-                    </div>
-    
                     <p>
-                        Labels appear pointing to the relevant features of the heart according to the step the student is on. These disappear when the feature is out of view and can be toggled on and off.
-                    </p>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/hearts_labels.mp4" type="video/mp4">
-                        </video>
-                    </div>
-    
-                    <p>
-                        The student can also rotate and zoom in on the model to get a better look.
-                    </p>
-                    <div class="video-container">
-                        <video controls>
-                            <source src="videos/hearts_interaction.mp4" type="video/mp4">
-                        </video>
-                    </div>
-    
-                    <p>
-                        For the CMS, I chose to use Storyblok for its simple set up and unlimited access for one editor. I also produced documentation with instructions on how to change the content of the module.
+                        When reflecting back on my experience working on this project, I definitely felt confused in the beginning. I didn’t even know what questions to ask to clarify our goal. It became a lot clearer when our client provided the structure of the module because it was clear to them what they wanted from us. From there the project was very straightforward and fun to work on. In the future, I would ask the client what they have in mind for the project, if they have any content to provide us and what they expect us to do for them. 
                     </p>
                 </section>
-
             </section>
         </article>
     </main>
