@@ -7,7 +7,7 @@
     --paragraphSpace: 1.3em;
     --cardSpacing: 5em;
 
-    --sidePadding: 22%;
+    --sidePadding: 22.5%;
     --borderRadius: 0.2em;
 
     --projectTitleSize: 2em;
@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 nav {
-    margin-bottom: calc(3 * var(--paragraphSpace));
+    /* margin-bottom: calc(3 * var(--paragraphSpace)); */
 }
 
 header nav ul {
@@ -81,8 +81,6 @@ header nav ul {
 .project-title {
     /* padding: 0 var(--sidePadding); */
     font-size: var(--projectTitleSize);
-    /* position: absolute;
-    bottom: 2em; */
 }
 
 h1 {
@@ -276,21 +274,31 @@ video {
 
 /* Media Queries */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     
     :root {
         --sidePadding: 10%;
+
+        --projectTitleSize: 1.5em;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 
     .banner-image {
         /* height: 200px; */
-        width: 500px;
+        width: 600px;
     }
 
     .project-cards img {
         display: inline-block;
         width: 90%;
         margin: 1em 0;
+    }
+
+    .project-title {
+        top: 70px;
     }
 
     .card-text {
