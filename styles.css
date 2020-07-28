@@ -139,6 +139,15 @@ article {
     text-align: left;
 }
 
+.bio-container {
+    margin: var(--cardSpacing) 0;
+}
+
+.bio-container p {
+    font-size: 2em;
+    text-align: left;
+}
+
 .project-cards:first-child {
     margin: var(--cardSpacing) 0;
 }
