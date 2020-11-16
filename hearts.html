@@ -26,155 +26,172 @@
         </nav>
     </header>
 
-    <section class="banner">
         <img class="banner-image" src="img\hearts\hearts-banner.png" alt="">
-    </section>
+
 
     <main>
-        
+
         <article class="project-article">
-            <section class="title-container">        
-                <h1 class="project-title">Diagnosing Heart Deformities - eLearning Module</h1>
+
+            <section class="title-container">
+                <h1 class="project-title">Designing an Online Learning Module</h1>
+            </section>
+
+
+
+            <section class="project-info">
+                <div class="project-info-section">
+                    <h1 class="project-info-title">My Role</h1>
+                    <p>
+                        Low/High-Fidelity Prototyping, Ideation, Interaction Design, Back-end Development
+                    </p>
+                </div>
+                <div class="project-info-section">
+                    <h1 class="project-info-title">Team</h1>
+                    <p>
+                        Andrew Le (me), Claire Say and Viswajith
+                        Unnikrishnan
+                    </p>
+                </div>
+                <div class="project-info-section">
+                    <h1 class="project-info-title">Tools used</h1>
+                    <p>Figma, Illustrator, Github, Node.js, Handlebars, Storyblok, Heroku</p>
+                </div>
             </section>
 
             <section>
-                <section>
-                    <p>
-                        An interactive online module for second-year medical students learning how to diagnose congenital heart deformities in babies.                     </p>
-                </section>
+                <!-- <h1 class="section-title">Project Brief</h1> -->
+                <p class="blurb">
+                    The goal of this project was to design and develop an online learning module for second-year medical
+                    students to supplement their classes on the topic of congenital heart disease in babies.
+                </p>
+            </section>
 
-                <section>
-                    <h1>Background Information</h1>
+            <section>
+                <h1 class="section-title">The Problem</h1>
+                <p>
+                    Traditional teaching of anatomy and pathology includes practical sessions with cadaveric
+                    samples, however, these samples degrade overtime and become less available due to improvements in
+                    screening and surgery.
+                </p>
+                <p><b>Heart samples degrade overtime</b> and are less available due to improvements in screening and
+                    surgery
+                    yet the increasing number of students each year increases their demand.</p>
+                <p><b>Students in rural areas</b> do not have access to the samples.</p>
+                <p><b>Students are left to explore the samples independently </b>after watching an old video about heart
+                    formation.</p>
+            </section>
+
+            <section>
+                <h1 class="section-title">Users</h1>
+                <p><b>Second year medical students</b> learning about congenital heart deformities in
+                    babies. Students in the classroom will be using an iPad to access the module that should take about
+                    30 minutes to complete.</p>
+                <p><b>Experienced doctors</b> who may be older and might not have much coding
+                    experience.</p>
+            </section>
+
+            <section>
+                <h1 class="section-title">Process</h1>
+
+                <p>The client provided a document containing the content of the module which used to create the
+                    wireflow. The module consists of four cases with each case divided into three sections: case
+                    details, exploration and explanation.</p>
+
+                <figure>
+                    <img src="img/hearts/hearts_wireflow.png" alt="Wireflow">
+                </figure>
+
+                <p>We then did rough sketches to see what the screens could look like.</p>
+
+                <figure>
+                    <img src="img\hearts\hearts-wireframes.png" alt="Wireframes">
+                </figure>
+
+                <p>Prototyped on Figma to test the pacing and the positioning of the different elements.</p>
+
+                <figure>
+                    <img src="img\hearts\hearts-figma.png" alt="Prototyped on Figma">
+                </figure>
+
+                <p>
+                    We received feedback saying that the case number next to the names (e.g. Case number #17040, Ben’s
+                    Story) should be removed, leaving only the name to make the journey feel more personable.
+                </p>
+                <p>
+                    The visual design took on a very friendly aesthetic when moving into the high-fidelity wireframes.
+                    We also decided to design for landscape orientation since the students will be using iPads. I won't
+                    elaborate on the visual design as it was not my role in this project.
+                </p>
+
+                <figure>
+                    <img src="img\hearts\hearts-hifi.png" alt="High-Fidelity Wireframes">
+                </figure>
+            </section>
+
+            <section>
+                <h1 class="section-title">Interaction Design</h1>
+
+                <div class="video-container">
+                    <video controls muted preload="auto">
+                        <source src="videos\hearts_interaction.mp4" type="video/mp4">
+                    </video>
+
                     <p>
-                        Traditional teaching of anatomy and pathology includes practical sessions with cadaveric
-                        samples. The Children’s Hospital at Westmead Clinical School have been using waxed heart samples from deceased babies with congenital heart deformities to teach 300 medical students every year. These samples degrade overtime and are less available due to improvements in screening and surgery. 
+                        An interactive, virtual representation of the heart addresses the problem of accessibility,
+                        making the sample available even for students unable to attend the practical sessions in person.
                     </p>
-                    <p>
-                        The school aimed to use 3D-printed versions of the heart samples but also wanted us to design an interactive, enquiry-based learning module to supplement the samples.
-                    </p>
-                </section>
+                </div>
 
-                <section>
-                    <h1>Problems</h1>
-                    <p>Heart samples degrade overtime and are less available due to improvements in screening and surgery yet the increasing number of students each year increases their demand.</p>
-                    <p>Students in rural areas do not have access to the samples.</p>
-                    <p>Students are left to explore the samples independently after watching an old video about heart formation.</p>
-                </section>
+                <div class="video-container">
 
-                <section>
-                    <h1>Team and Role</h1>
-                    <p>
-                        The team consisted of a back-end developer, front-end developer and visual designer/illustrator.
-                    </p>
-                    <p>
-                        <ul class="bullet-points">As the back end-developer, I was responsible for: 
-                            <li>Choosing an appropriate content management system for the project</li>
-                            <li>Writing the code that allows for the content to be loaded quickly and dynamically</li>
-                            <li>Ensuring that the code is written in a way that allows the content can be easily changed via the CMS</li>
-                            <li>Creating documentation showing the client how to edit the content</li>
-                        </ul>
-                    </p>
+
+                    <video controls muted preload="auto">
+                        <source src="videos\hearts_orientation.mp4" type="video/mp4">
+                    </video>
 
                     <p>
-                        <ul class="bullet-points">The interaction design responsiblities were shared amongst the team:
-                            <li>Defining the brief</li>
-                            <li>Creating wireflows and wireframes</li>
-                            <li>Creating personas</li>
-                            <li>Prototyping and testing</li>
-                            <li>Consulting with the client and incorporating feedback</li>
-                        </ul>
+                        The camera orientates itself to show students how to look at the heart according to the current
+                        instruction. This provides direct guidance to students, a lack of which was identified as a
+                        problem of how the module was conducted previously.
                     </p>
-                </section>
+                </div>
 
-
-                <section>
-                    <h1>Users</h1>
-                    <p>The front-end users are second year medical students learning about congenital heart deformities in babies. Students in the classroom will be using an iPad to access the module that should take about 30 minutes to complete.</p>
-                    <p>The back-end users are experienced doctors who may be older and might not have much coding experience.</p>
-                </section>
-
-                <section>   
-                    <h1>Process</h1>
-
-                    <p>The client provided a document containing the content of the module which used to create the wireflow. The module consists of four cases with each case divided into three sections: case details, exploration and explanation.</p>
-                    
-                    <figure>
-                        <img src="img/hearts/hearts_wireflow.png" alt="Wireflow">
-                    </figure>
-
-                    <p>We then did rough sketches to see what the screens could look like.</p>
-
-                    <figure>
-                        <img src="img\hearts\hearts-wireframes.png" alt="Wireframes">
-                    </figure>
-
-                    <p>Prototyped on Figma to test the pacing and the positioning of the different elements.</p>
-
-                    <figure>
-                        <img src="img\hearts\hearts-figma.png" alt="Prototyped on Figma">
-                    </figure>
+                <div class="video-container">
+                    <video controls muted preload="auto">
+                        <source src="videos\hearts_labels.mp4" type="video/mp4">
+                    </video>
 
                     <p>
-                        We received feedback saying that the case number next to the names (e.g. Case number #17040, Ben’s Story) should be removed, leaving only the name to make the journey feel more personable. 
-                    </p><p>
-                        The visual design took on a very friendly aesthetic when moving into the high-fidelity wireframes. We also decided to design for landscape orientation since the students will be using iPads.
+                        Structure and guidance is also provided by labels pointing to the relevant features of the
+                        heart. These disappear when features are out of view and can be toggled on and off by the
+                        student.
                     </p>
+                </div>
 
-                    <figure>
-                        <img src="img\hearts\hearts-hifi.png" alt="High-Fidelity Wireframes">
-                    </figure>
-                </section>
-                
-                <section>
-                    <h1>Interaction Design</h1>
-                    
-                    <p>An interactive, virtual representation of the heart addresses the problem of accessibility, making the sample available even for students able to attend the practical sessions in person. </p>
-                    
-                    <div class="video-container">
-                        <video playsinline autobuffer autoplay muted loop preload="auto">
-                            <source src="videos\hearts_interaction.mp4" type="video/mp4">
-                        </video>
-                    </div>
+            </section>
 
-                    <p>The camera orientates itself to show students how to look at the heart according to the current instruction. This provides direct guidance to students, a lack of which was a problem of how the module was conducted previously. </p>
-                    
-                    <div class="video-container">
-                        <video playsinline autobuffer autoplay muted loop preload="auto">
-                            <source src="videos\hearts_orientation.mp4" type="video/mp4">
-                        </video>
-                    </div>
+            <section>
+                <h1 class="section-title">Outcome</h1>
+                <p>
+                    After completing the project, our team was invited to present our design to the Sydney Medical
+                    School MD2020 Education Showcase where it was very well received. The application was then handed
+                    off to Westmead Clinical School.
 
-                    <p>Structure and guidance is also provided by labels pointing to the relevant features of the heart. These disappear when features are out of view and can be toggled on and off by the student. </p>
-                    
-                    <div class="video-container">
-                        <video playsinline autobuffer autoplay muted loop preload="auto">
-                            <source src="videos\hearts_labels.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                </p>
+                <p>
+                    When reflecting back on my experience working on this project, I definitely felt confused in the
+                    beginning. I didn’t even know what questions to ask to clarify our goal. It became a lot clearer
+                    when our client provided the structure of the module because it was clear to them what they wanted
+                    from us. From there the project was very straightforward and fun to work on. In the future, I would
+                    ask the client what they have in mind for the project, if they have any content to provide us and
+                    what they expect us to do for them.
+                </p>
 
-                    <!-- <p>Words that are underlined can be hovered over to reveal further information on the page, reducing the need to look for information elsewhere.</p>
-                
-                    <div class="video-container">
-                        <video controls>
-                            <source src="" type="video/mp4">
-                        </video>
-                    </div> -->
-                </section>
-
-                <section>
-                    <h1>Outcome</h1>
-                    <p>
-                        After completing the project, our team was invited to present our design to the Sydney Medical School MD2020 Education Showcase where it was very well received. The application was then handed off to Westmead Clinical School.
-                         
-                    </p>
-                    <p>
-                        When reflecting back on my experience working on this project, I definitely felt confused in the beginning. I didn’t even know what questions to ask to clarify our goal. It became a lot clearer when our client provided the structure of the module because it was clear to them what they wanted from us. From there the project was very straightforward and fun to work on. In the future, I would ask the client what they have in mind for the project, if they have any content to provide us and what they expect us to do for them. 
-                    </p>
-
-                    <p>
-                        You can take a look at the module <a href="http://cardiac-cases.herokuapp.com/">here.</a> It may take a while to load up at first.
-                    </p>
-                </section>
+                <p>
+                    You can take a look at the module <a href="http://cardiac-cases.herokuapp.com/">here.</a> It may
+                    take a while to load up at first.
+                </p>
             </section>
         </article>
     </main>

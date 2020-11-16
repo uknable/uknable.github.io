@@ -7,10 +7,13 @@
     --paragraphSpace: 1.3em;
     --cardSpacing: 5em;
 
-    --sidePadding: 22.5%;
+    --sidePadding: 15%;
     --borderRadius: 0.2em;
 
-    --projectTitleSize: 2em;
+    --fontSize: 1.1em;
+    --projectTitleSize: 3em;
+    --blurbSize: 1.5em;
+    --sectionTitleSize: 2em;
 }
 
 @font-face {
@@ -43,6 +46,11 @@
     src: url("fonts/RobotoMono-Regular.ttf");
 }
 
+@font-face {
+    font-family: "Merriweather-Bold";
+    src: url("fonts/Merriweather-Bold.ttf");
+}
+
 html {
     background-color: var(--bgColor);
 }
@@ -51,6 +59,10 @@ body {
     font-family: "Nunito-Regular", sans-serif;
 }
 
+p {
+    line-height: 1.5em;
+    font-size: var(--fontSize);
+}
 nav a, nav li {
     font-family: "Nunito-Regular", sans-serif;
 }   
@@ -69,29 +81,59 @@ header nav ul {
     display: flex;
 }
 
-.banner {
-    position: relative;
-}
+
 
 .banner-image {
     /* height: 200px; */
     width: 100%;
+    margin-bottom: 5em;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-info-brief {
+    width: 60%;
+    padding: 1em;
+}
+
+.project-info-brief p {
+    font-size: 1.3em;
+}
+
+.project-info-section {
+    padding: 0 2em;
+    width: auto;
+}
+
+.project-info-title {
+    font-size: calc(var(--sectionTitleSize) * 0.75);
 }
 
 .project-title {
-    /* padding: 0 var(--sidePadding); */
+    /* padding: var(--sidePadding) 0; */
     font-size: var(--projectTitleSize);
 }
 
+.section-title {
+    font-size: var(--sectionTitleSize);
+}
+
 h1 {
-    font-family: "Nunito-ExtraBold", sans-serif;
-    font-size: 1em;
+    font-family: "Merriweather-Bold", sans-serif;
     color: #313131;
 }
 
-p {
-    line-height: 1.5em;
+.blurb {
+    text-align: center;
+    font-family: "Nunito-Light", serif;
+    font-size: var(--blurbSize);
+    padding: 0 5em;
 }
+
+
 
 ul li:first-child {
     flex-grow: 10;
@@ -121,10 +163,6 @@ li a {
 main {
     padding: 0 var(--sidePadding);
     text-align: center;
-}
-
-main h1:first-child {
-    margin-bottom: var(--paragraphSpace);
 }
 
 main h1 {
@@ -231,8 +269,8 @@ figure img {
 }
 
 figure img:hover {
-    transform: scale(1.7);
-    cursor: zoom-in;
+    transform: scale(1.2);
+    box-shadow: 0 var(--shadColor);
 }
 
 figure.sidebyside img {
@@ -260,7 +298,7 @@ code i {
 
 
 section {
-    margin-bottom: 4em;
+    margin-bottom: 10em;
 }
 
 footer {
@@ -274,10 +312,24 @@ footer {
 .video-container {
     text-align: center;
     padding: calc(0.1 * var(--paragraphSpace)) 0 var(--paragraphSpace) 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.video-container p {
+    margin-bottom: 0;
+    padding: 1em 1.5em;
 }
 
 video {
-    width: 70%;
+    width: 60%;
+    box-shadow: 2px 2px 4px var(--shadColor);
+    border-radius: var(--borderRadius);
+    transition: 0.2s ease-in-out;
+}
+
+video:hover {
+    transform: scale(1.1);
     
 }
 
@@ -288,11 +340,18 @@ video {
     :root {
         --sidePadding: 10%;
 
-        --projectTitleSize: 1.5em;
+        --projectTitleSize: 2.5em;
+        --blurbSize: 1.2em;
+        --sectionTitleSize: 1.5em;
     }
 
     body {
         overflow-x: hidden;
+    }
+
+    .bio-container p {
+        font-size: 1.5em;
+        text-align: left;
     }
 
     .banner-image {
@@ -325,6 +384,15 @@ video {
 
     nav {
         font-size: 0.9em;
+    }
+
+    .video-container {
+        flex-direction: column;
+    }
+
+    video {
+        width: 100%;
+        margin: 0 auto;
     }
 
 }
