@@ -295,8 +295,6 @@ code i {
     color: grey;
 }
 
-
-
 section {
     margin-bottom: 10em;
 }
@@ -374,9 +372,18 @@ video:hover {
         width: 90%;
     }
 
-    section {
-        margin-bottom: 2em;
+    .project-info {
+        flex-direction: column;
     }
+
+    .project-info-section {
+        padding: 0;
+    }
+
+    .blurb {
+        padding: 1em;
+    }
+
 
     p {
         font-size: 0.9em;
