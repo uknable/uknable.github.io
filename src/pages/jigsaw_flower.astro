@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SketchHeader from '../components/SketchHeader.astro';
+
+const name = "jigsaw_flower";
+---
+
+<Layout title={name}>
+    <SketchHeader name={name}></SketchHeader>
+    <script is:inline src=`/js/${name}.js`></script>
+</Layout>
+
+<style>
+</style>
