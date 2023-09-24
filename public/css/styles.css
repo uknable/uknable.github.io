@@ -10,7 +10,7 @@
   --sidePadding: 1em;
   --borderRadius: 0.2em;
 
-  --fontSize: 1.5em;
+  --fontSize: 1.25em;
   --projectTitleSize: 3em;
   --blurbSize: 1.5em;
   --sectionTitleSize: 2em;
@@ -90,7 +90,7 @@ header nav ul {
 }
 
 h1 {
-  font-family: "Merriweather-Bold", sans-serif;
+  font-family: sans-serif;
   color: #313131;
   font-size: var(--fontSize)
 }
@@ -134,9 +134,9 @@ li a {
 
 div.container {
   text-align: center;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   justify-content: center;
 }
 
@@ -194,7 +194,7 @@ article {
 
 .card-text h1 {
   vertical-align: top;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .card-text a,

@@ -8,7 +8,7 @@ let agents = [];
 let agentsNum = 1;
 
 function setup() {
-  createCanvas(1000, 1000); // 1:1 ratio for instagram purposes
+  createCanvas(windowWidth, windowHeight); 
 
   colorMode(HSB);
   angleMode(DEGREES);
@@ -41,7 +41,7 @@ class Agent {
   constructor() {
     // this.pos = createVector(random(width), random(height));
     this.pos = createVector(width/2, height/2); // test
-    this.colour = color(150, 100, 100, .1);
+    this.colour = color(150, 100, 100, .2);
     this.noiseOffset = random(100);
 
     ////////////////////////////////////
@@ -49,7 +49,7 @@ class Agent {
     ////////////////////////////////////
 
     this.len;
-    this.lenUpper = width/7;
+    this.lenUpper = min(windowWidth, windowHeight)/7;
     this.lenInit = random(this.lenUpper, this.lenUpper/2);
     this.lenInc = .03;
     this.lenOscRange = this.lenUpper/2;
@@ -71,7 +71,7 @@ class Agent {
     //////////////////////////////////////
 
     this.oscInit = 270; 
-    this.oscRate = .5;
+    this.oscRate = 1;
 
   }
 

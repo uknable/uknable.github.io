@@ -6,15 +6,21 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="project-cards">
-    <div class="card-text">
-        <h1>{title}</h1>
-    </div>
-
+<!-- <div class="project-cards">
     <a href={title}>
-        <img src=`/assets/${title}.gif`>
+        <div class="card-text">
+            <h1>{title}</h1>
+        </div>
+    </a>
+</div> -->
+
+<div class="project-cards">
+    <a href={title}>
+        <div class="card-text">
+            <h1>{title}</h1>
+        </div>
     </a>
 </div>
-
+    
 <style>
 </style>
