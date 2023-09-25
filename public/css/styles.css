@@ -327,7 +327,7 @@ video:hover {
   }
 
   body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
   .bio-container p {
