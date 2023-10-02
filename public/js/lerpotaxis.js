@@ -53,7 +53,7 @@ class Petal {
 
 function setup() {
     shorter = min(windowWidth, windowHeight);
-    createCanvas(shorter, shorter);
+    createCanvas(windowWidth, windowHeight);
 
     // frameRate(1);
     angleMode(DEGREES)
