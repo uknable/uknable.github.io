@@ -8,14 +8,14 @@ let shorter;
 
 let n = 1000;
 let petalsNum = n;
-let c = 7;
+let c = 10;
 let phyloAngle = 137.5;
 let mirrorNum = 5;
 
 let petals = [];
-let size = 5;
+let size = c;
 let lerpRate = 0.001;
-let petalCD = 30;
+let petalCD = 5;
 let currentTime = 0;
 
 class Petal {
@@ -55,7 +55,7 @@ function setup() {
     shorter = min(windowWidth, windowHeight);
     createCanvas(windowWidth, windowHeight);
 
-    // frameRate(1);
+    pixelDensity(1);
     angleMode(DEGREES)
     noStroke();
 }
