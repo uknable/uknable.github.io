@@ -17,8 +17,8 @@
         Using sin/cos are the key to making things look 3D
 */
 
-const cellH = 60;   // 62,  30, 60
-const cellW = 4.2;    // 7,   3, 4.2
+const cellH = 104;   // 62,  30, 60
+const cellW = 5.6;    // 7,   3, 4.2
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -39,19 +39,19 @@ function draw() {
     for (let y=0; y<height; y+=cellH) {
         yCount++;
         
-        const yPhaseNoiseIn = frameCount*0.014 - yCount*0.28;
-        const yPhase = noise( yPhaseNoiseIn ) * cellH*0.90;
-        // const yPhase = 0
 
         beginShape();
-        vertex( -cellW, y+yPhase );
+        vertex( -cellW/2, y );
 
         let xCount = 0;
         for (let x=0; x<width; x+=cellW) {
             xCount++;
 
-            // const yPhaseVar = 0;
-            const yPhaseVar = sin( frameCount*0.028 + xCount*0.056 + yCount*355.5 ) * cellH/4; // yCount*279.9, yCount*360, yCount*355.5!!
+            // const yPhase = 0;
+            const yPhase = sin( frameCount*0.042 + xCount*0.07 + yCount*355.5 ) * cellH/4; // yCount*279.9, yCount*360, yCount*355.5!!
+            const fcRate = frameCount*0.007
+            const yPhaseVar = noise( fcRate - xCount*0.014,  fcRate - yCount*0.56) * cellH;
+            // const yPhaseVar = 0
 
             if ( xCount%2 == 0 ) {
                 // Downward half of the wave
