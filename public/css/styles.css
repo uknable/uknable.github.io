@@ -324,6 +324,10 @@ video:hover {
     --projectTitleSize: 2.5em;
     --blurbSize: 1.2em;
     --sectionTitleSize: 1.5em;
+    --headerVertPadding: 0.5em;
+    --sidePadding: 0.5em;
+    --fontSize: 1em;
+    --cardSpacing: 1em;
   }
 
   body {
